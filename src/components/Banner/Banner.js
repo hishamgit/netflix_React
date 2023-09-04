@@ -6,7 +6,7 @@ function Banner() {
     const [movie,setMovie]=useState()
     useEffect(()=>{
          axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response)=>{
-            console.log(response.data.results[0])
+            // console.log(response.data.results[0])
             let trend=response.data.results
             setMovie(trend[(Math.floor(Math.random() * trend.length))])
          }) 
